@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+}
+.crdlst_cvr{
+    border: 1px solid red;
+   
+    height: 170vh;
+
+}
+.crdlst_hdg{
+    font-family: 'Permanent Marker', cursive;
+    font-size: xx-large;
+}
+.crd_cvr_music{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+   
+   
+  
+}
+.crdhold{
+    display: flex;
+    flex-wrap: wrap;
+  
+    /* height: 80vh; */
+    width: 80vw;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1vh;
+}
+.card_cvr{
+  
+    display: flex;
+
+    flex-direction: column;
+    gap: 1vh;
+
+     justify-content: center;
+     align-items: center;
+     height: 70vh;
+     width: 25vw;
+
+}
+.card_cvr_title{
+    font-weight: 700;
+    font-size: larger;
+
+}
+.wrapper {
+    overflow: hidden;  
+    width: 20vw;
+}
+.portfolio-item {
+   height: 40vh;
+
+   position: relative;
+   text-align: center;
+   cursor: pointer;
+   margin-bottom: 20px;
+   background-position: center;
+   background-size: cover;
+   overflow: hidden;
+     -webkit-transition: all 0.8s ease-in-out;
+}
+
+.portfolio-item:hover {
+    -webkit-transform: scale(1.5,1.5); 
+    transform: scale(1.5,1.5);
+    -webkit-transition: all 0.8s ease-in-out;
+}
+.card_cvr_clicks{
+    display: flex;
+    gap: 5vw;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+.card_cvr_btn{
+border-radius: 5px;
+    padding: 3px;
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+.card_cvr_btn:active{
+    transform: scale(1.1);
+}
+.viewcart{
+    color: white;
+    background-color: grey;
+    padding: 1vw;
+    margin-bottom: 3vh;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.viewcart:active{
+transform: scale(1.1);
+}
+.succss_msg{
+    background-color: deepskyblue;
+    color: white;
+    padding: 15px;
+    width: 30vw;
+    text-align: center;
+    font-size: large;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 5%;
+    z-index: 99;
+    right: 5vw;
+}
+.cartshow,.crd_cvr_music{
+    /* position: absolute; */
+}

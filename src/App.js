@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { useState } from 'react';
+import './App.css';
+import Cardlist from './components/home/Cardlist';
+import Footer from './components/UI/Footer';
+import Generics from './components/UI/Generics';
+import Nav from './components/UI/Nav';
+import Context from './components/UI/Context';
+import mainArray from './components/resource/Array'
 function App() {
+  
+  const[showalb,setalb]= useState(false)
+  const[showcrt,setcart]= useState(false)
+  const [getArry,setArry]=useState([])
+
+  function updateshwcrt(e){
+    setcart(e)
+  }
+  function clear(e){
+    setArry(e)
+  }
+  function updateArry(e){
+      setArry([...getArry,e])
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    <Context.Provider value={
+      {getArry:getArry,
+        updateArry:updateArry,
+        mainArray:mainArray,
+        updateshwcrt:updateshwcrt,
+        showcrt:showcrt,
+        clear:clear
+      
+      }
+    }>
+      <Nav/>
+        <Generics val={showalb}/>
+      <Cardlist/>
+      <Footer/>
+      </Context.Provider>
+ 
   );
 }
 

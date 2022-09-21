@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.foot_cvr{
+ background-color: dodgerblue;
+ height: 15vh;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+.foot_txt{
+    font-size: xx-large;
+    color: white;
+    font-weight: 700;
+}
+.foot_icons_cvr{
+ 
+    width: 30vw;
+    display: flex;
+    gap: 5vw;
+}
+.foot_icon{
+    transform: scale(2.1);
+    background-color: white;
+    cursor: pointer;
+}
+
