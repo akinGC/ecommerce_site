@@ -8,6 +8,8 @@
  display: flex;
  align-items: center;
  justify-content: space-around;
+ /* position: fixed;
+ bottom: 0%; */
 }
 .foot_txt{
     font-size: xx-large;

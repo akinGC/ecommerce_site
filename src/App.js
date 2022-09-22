@@ -7,12 +7,18 @@ import Generics from './components/UI/Generics';
 import Nav from './components/UI/Nav';
 import Context from './components/UI/Context';
 import mainArray from './components/resource/Array'
+import Aboutcnt from './components/about/Aboutcnt';
+import Tours from './components/store/Tours';
+import { Route, Routes } from 'react-router-dom';
 function App() {
   
   const[showalb,setalb]= useState(false)
   const[showcrt,setcart]= useState(false)
   const [getArry,setArry]=useState([])
 
+  function updtalb(e){
+setalb(e)
+  }
   function updateshwcrt(e){
     setcart(e)
   }
@@ -30,13 +36,19 @@ function App() {
         mainArray:mainArray,
         updateshwcrt:updateshwcrt,
         showcrt:showcrt,
-        clear:clear
+        clear:clear,
+        updtalb:updtalb
       
       }
     }>
-      <Nav/>
-        <Generics val={showalb}/>
-      <Cardlist/>
+<Nav/> 
+        <Generics val={showalb}/> 
+        <Routes>
+          <Route path='/' element={<Cardlist/>}/>
+          <Route path='/home' element={<Tours/>}/>
+          <Route path='/about' element={<Aboutcnt/>}/>
+        </Routes>
+      
       <Footer/>
       </Context.Provider>
  

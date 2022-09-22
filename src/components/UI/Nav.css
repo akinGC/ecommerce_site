@@ -30,6 +30,10 @@
     align-items: center;
     padding-right: 3vw;
 }
+.nav_mncnt_text{
+
+    color: white;
+}
 .nav_mncnt_text:hover{
 transform: scale(1.1);
 cursor: pointer;

@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.abtcvr{
+    border: 1px solid red;
+    padding: 2vw;
+    height: 48vh;
+}
+.abtcnt{
+    display: flex;
+    gap: 5vw;
+
+}
+.abtcnt_img{
+    border: 1px solid blue;
+ height: 200px;
+    /* width: 70vw;  */
+    background:url('https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+}
+.abtcnt_txt{
+    width: 50vw;
+}
+.abtcnt_txt1{
+    margin-top: 2vh;
+    padding-bottom: 5vh;
+}

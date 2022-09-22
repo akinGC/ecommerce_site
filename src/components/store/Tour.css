@@ -1,0 +1,45 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.tourcvr{
+  
+    height: 70vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tourcvr_title{
+    font-family: 'Permanent Marker', cursive;
+    font-size: x-large; 
+}
+.tourcvr_itm{
+    border-bottom: 1px solid black;
+    padding-bottom: 1vh;
+    display: flex;
+    gap: 5vw;
+    margin-top: 2vh;
+    align-items: center;
+    color: grey;
+    margin-bottom: 2vh;
+}
+.tourcvr_itm_btn{
+    background-color: deepskyblue;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10vw;
+}
+.tourcvr_itm_btn:active{
+    transform: scale(1.1);
+}
+.tourcvr_itm_plc{
+  
+    width: 10vw;
+}
+.tourcvr_itm_descq{
+ 
+    width: 16vw;
+}
