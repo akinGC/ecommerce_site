@@ -20,12 +20,12 @@ function Nav() {
               <NavLink to='/home' style={{textDecoration:'none'}}><span onClick={updalb} id='true' className='nav_mncnt_text'>HOME</span></NavLink>
               <NavLink to='/'style={{textDecoration:'none'}}><span  onClick={updalb} className='nav_mncnt_text'>STORE</span></NavLink>
               <NavLink to='/about'style={{textDecoration:'none'}}><span  onClick={updalb} className='nav_mncnt_text'>ABOUT</span></NavLink>
+              <NavLink to='/contact'style={{textDecoration:'none'}}><span  onClick={updalb} className='nav_mncnt_text'>Contact US</span></NavLink>
             </div>
             <div className='ecom_nav_crtcnt'>
-                <Cartitm/>
+                <Cartitm/> 
             </div>
         </nav>
      );
 }
-
 export default Nav;
