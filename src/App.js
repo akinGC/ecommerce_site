@@ -11,6 +11,7 @@ import Aboutcnt from './components/about/Aboutcnt';
 import Tours from './components/store/Tours';
 import { Route, Routes } from 'react-router-dom';
 import Contact from './components/Contact/Contact';
+import View from './components/store/View';
 function App() {
   
   const[showalb,setalb]= useState(false)
@@ -49,6 +50,7 @@ setalb(e)
           <Route path='/home' element={<Tours/>}/>
           <Route path='/about' element={<Aboutcnt/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route path='/view/:id' element={<View/>}/>
         </Routes>
       
       <Footer/>

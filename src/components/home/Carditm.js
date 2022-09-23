@@ -1,9 +1,10 @@
 import './Carditm.css'
 import Context from '../UI/Context';
 import { useContext, useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 function Carditm(props) {
     const valx = useContext(Context)
- 
+    const nav=useNavigate()
     function newItmAdded(e){
         // console.log(e.target.value)
 
@@ -37,13 +38,18 @@ function Carditm(props) {
        
 
     }
+function imgclk(e){
+    console.log(e.target.id)
+    nav(`/view/${e.target.id}`)
 
+
+}
     return ( 
         <div className='card_cvr'>
             <span className='card_cvr_title'>{props.itm.title}</span>
             {/* <div className='card_cvr_img' style={{backgroundImage:`url(${props.itm.imageUrl})`}}></div> */}
             <div class="wrapper">
-          <div class="portfolio-item card_cvr_img"style={{backgroundImage:`url(${props.itm.imageUrl})`}}>
+          <div class="portfolio-item card_cvr_img"id={props.itm.title} onClick={imgclk} style={{backgroundImage:`url(${props.itm.imageUrl})`}}>
           </div>
           </div>
 
