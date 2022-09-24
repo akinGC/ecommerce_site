@@ -17,6 +17,9 @@ function App() {
   const[showalb,setalb]= useState(false)
   const[showcrt,setcart]= useState(false)
   const [getArry,setArry]=useState([])
+  
+
+
 
   function updtalb(e){
 setalb(e)
@@ -39,7 +42,8 @@ setalb(e)
         updateshwcrt:updateshwcrt,
         showcrt:showcrt,
         clear:clear,
-        updtalb:updtalb
+        updtalb:updtalb,
+     
       
       }
     }>
@@ -54,6 +58,7 @@ setalb(e)
         </Routes>
       
       <Footer/>
+ 
       </Context.Provider>
  
   );

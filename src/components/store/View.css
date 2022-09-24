@@ -1,45 +1,70 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  .image-container {
-    width: 30%;
-    /* height: 30vh; */
-    /* width: fit-content; */
-    margin: 5% 0 0 5%;
-    /* border: 1px solid black; */
-  }
-  img {
-    /* max-width: 100%; */
-    height: 40vh;
-  }
-  #overlay {
-    display: none;
-    background: url("https://www.color-meanings.com/wp-content/uploads/colored-rainbow-over-forest-mountains-1024x682.jpeg");
-    position: absolute;
-    /* width: 30%;
-    height: 45%; */
-    width: 8vw;
-    height: 15vh;
-    margin-top: -22%;
-    margin-left: 50%;
-  zoom: 5;
-    border: 2px solid red;
-    /* z-index: 1000; */
-    background-repeat: no-repeat;
+*{
+  margin: 0%;
+  padding: 0%;
+}
+.vi_whole{
+  display: flex;
+  margin-left: 2vw;
+
+}
+.vi_allimg_list{
+  /* border: 1px solid red; */
+  width: 15vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 1vh;
+  /* justify-content: space-evenly; */
+}
+.magc{
+  /* border: 1px solid black; */
+  padding: 2vw;
+}
+.amin_title{
+font-size: larger;
+color: cornflowerblue;
+font-weight: 700;
+  /* border: 1px solid black; */
   
-  }
-  #mouse-overlay {
-    cursor: zoom-in;
-    position: absolute;
-    width: 2em;
-    height: 2em;
-    transform: translate(-50%, -50%);
-    background-color: rgba(245, 245, 245, 0.6);
-    border-radius: 50%;
-  }
-.viwhole{
-    border: 1px solid red;
-    height: 150vh;
+}
+.vi_comnt{
+  /* border: 1px solid red; */
+  min-width: 40vw;
+  position: absolute;
+  left: 50vw;
+  top: 40vh;
+  min-height: 30vh;
+  padding: 1vh;
+  border-radius: 5px;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  gap: 2vh;
+}
+.name_ext{
+  color: black;
+  font-weight: 700;
+
+}
+.cmt_ext{
+  color: green;
+  letter-spacing: 0.1vw;
+}
+.sid_img{
+  /* border: 1px solid red; */
+  cursor: pointer;
+  height: 20vh;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+
+}
+.vi_inr{
+  display: flex;
+  flex-direction: column;
+}
+.sid_img{
+  width: 15vw;
 }

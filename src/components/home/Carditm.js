@@ -40,6 +40,7 @@ function Carditm(props) {
     }
 function imgclk(e){
     console.log(e.target.id)
+    
     nav(`/view/${e.target.id}`)
 
 
