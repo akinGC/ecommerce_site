@@ -16,10 +16,21 @@ import Context from './components/UI/Context';
 import Login from './components/Logincomp/Login';
 import { Fragment } from 'react';
 import { useContext } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-  
+ 
  const auth = useContext(Context)
+
+ async   function fetcholdz(){
+  const resp =   await   fetch(`${auth.url}/${auth.usermail}`)
+  const  data = await resp.json()
+   
+   auth.clear(data)
+
+   }
+  //  fetcholdz()
+
   return (
   
     <Fragment>

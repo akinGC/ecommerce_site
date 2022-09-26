@@ -25,7 +25,32 @@ function Carditm(props) {
                     price:itm.price,
                     imageUrl:itm.imageUrl
                 }
+                fetch(`https://crudcrud.com/api/6e00a4e79a914d64ac39c873ab990876/${valx.usermail}`,{
+        method:'POST',
+        body:JSON.stringify({
+            title:itm.title,
+            price:itm.price,
+            imageUrl:itm.imageUrl
+        }),
+        headers:{
+            'Content-Type':'application/json'
+        }
+     }).then((resp)=>{
+        if(resp.ok){
+            return resp.json().then((data)=>{
+                let newObj={
+                    title:itm.title,
+                    price:itm.price,
+                    imageUrl:itm.imageUrl,
+                    id:data._id
+                }
                 valx.updateArry(newObj)
+            })
+        }
+     })
+                
+               
+
             }
         })
        }
@@ -38,6 +63,8 @@ function Carditm(props) {
        
 
     }
+
+
 function imgclk(e){
     console.log(e.target.id)
     

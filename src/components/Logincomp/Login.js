@@ -31,7 +31,12 @@ function Login() {
                     localStorage.setItem('idToken',data.idToken)
                     auth.updtoken(data.idToken)
                     auth.setIsLoggedIn(true)
+                    let mail = mailref.current.value
+                  let a =   mail.replace('@', '');
+                    a.replace('.', '');
+                    auth.setUsermail(a.replace('.', ''))
                     nav('/store')
+                    fetchold(a.replace('.', ''))
 
                 })
             }
@@ -41,6 +46,14 @@ function Login() {
                 })
             }
         })
+
+    }
+
+ async   function fetchold(e){
+   const resp =   await   fetch(`https://crudcrud.com/api/6e00a4e79a914d64ac39c873ab990876/${e}`)
+   const  data = await resp.json()
+    
+    auth.clear(data)
 
     }
     return ( 

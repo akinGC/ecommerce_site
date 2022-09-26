@@ -5,7 +5,7 @@ import Context from '../UI/Context';
 import { useContext, useEffect, useState } from 'react';
 function Cartcnt() {
     const cont = useContext(Context)
-    // console.log(cont.getArry)
+   
     function close(){
         cont.updateshwcrt(false)
     }
@@ -15,12 +15,23 @@ function Cartcnt() {
         setTimeout(() => {
             alert('Purchase sucessfull!!!') 
         }, 500);
+        let newarr = cont.getArry
+        for(let i=0;i<newarr.length;i++){
+            fetch(`https://crudcrud.com/api/6e00a4e79a914d64ac39c873ab990876/${cont.usermail}/${newarr[i].id}`,{
+                method:'DELETE'
+            })
+        }
+        
         
     }
     function deletez(e){
         let newarr = cont.getArry
        for(let i=0;i<newarr.length;i++){
         if(newarr[i].title==e.target.id){
+            fetch(`https://crudcrud.com/api/6e00a4e79a914d64ac39c873ab990876/${cont.usermail}/${newarr[i].id}`,{
+                method:'DELETE'
+            })
+
             newarr.splice(i,1)
         }
        }
