@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.log_out{
+    display: flex;
+    justify-content: center;
+}
+.log_frm{
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 60vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 1vh;
+    display: flex;
+    flex-direction: column;
+  justify-content: space-evenly;
+    align-items: center;
+
+}
+.log_mail,.log_pass{
+    display: flex;
+    flex-direction: column;
+}
+.lof_title{
+    font-weight: 700;
+    font-size: x-large;
+}
+input{
+    background-color: white;
+
+}
+.log_btn{
+    padding: 1vh;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    width: 10vw;
+    border-radius: 5px;
+    cursor: pointer;
+    /* display: none; */
+}
+.log_btn:active{
+    transform: scale(1.1);
+
+}
+.log_load{
+    color: blueviolet;
+    font-weight: 700;
+    letter-spacing: 0.1vw;
+}

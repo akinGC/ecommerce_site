@@ -2,8 +2,12 @@ import './Generics.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
+import Context from './Context';
+import { useContext } from 'react';
 function Generics(props) {
-const dispstate = props.val;
+  const auth = useContext(Context)
+  console.log(auth.showcrt)
+const dispstate = auth.showalb;
 
 
 useEffect(()=>{
